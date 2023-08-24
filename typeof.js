@@ -11,7 +11,7 @@ console.log("typeof NaN ",typeof NaN);
 console.log("typeof non-empty", typeof "non-empty");
 console.log("typeof Date() ",typeof Date());
 console.log("typeof function () { } ", typeof function(){ });
-console.log("typeof undefined == typeof NULL", typeof undefined == typeof NULL);
+console.log("typeof NULL", typeof NULL);
 console.log("typeof typeof 1", typeof typeof 1);
 
 

@@ -1,4 +1,4 @@
-let valueToBoolExpressionResult = [undefined, null, 0, false, '', NaN, 12, -12, "Non-empty", {}, [], Date()];
+let valueToBoolExpressionResult = [undefined, null, 0, false, '', NaN, 12, -12, "Non-empty", {}, [], Date(), { dfdf: "abc" }, [1, 2, 3]];
 valueToBoolExpressionResult.forEach(element => {
     console.log(element);
     if (element) {
@@ -9,11 +9,12 @@ valueToBoolExpressionResult.forEach(element => {
 });
 
 console.log('=================================');
-
+// == operator convert and compare..
 console.log(false == '0')
 console.log(false === '0')
 
 console.log('=================================');
 
-console.log(1 < 2 < 3);
-console.log(3 > 2 > 1);
+//true is treated as 1.
+console.log(1 < 2 < 3); //left to right, true<3
+console.log(3 > 2 > 1);//

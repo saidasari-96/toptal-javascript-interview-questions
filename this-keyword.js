@@ -1,4 +1,5 @@
-//'use strict';
+/*
+'use strict';
 var foo = 'global';
 var myObject = {
     foo: "bar",
@@ -7,16 +8,18 @@ var myObject = {
         console.log("outer func:  this.foo = " + this.foo);// this refers scope of owner of the function.
         console.log("outer func:  self.foo = " + self.foo);
         (function () {
-            console.log("inner func:  this.foo = " + this.foo);
+            console.log("inner func:  this.foo = " + this.foo); //comment the use strict at the top line.
             console.log("inner func:  self.foo = " + self.foo);
         }());
     }
 };
 myObject.func();
 
+*/
 
+/*
 console.log('====================================');
-
+var _name="Global";
 var hero = {
     _name: 'John Doe',
     getSecretIdentity: function (){
@@ -25,23 +28,25 @@ var hero = {
 };
 
 var stoleSecretIdentity = hero.getSecretIdentity;
-
 console.log(stoleSecretIdentity());
+console.log(stoleSecretIdentity.call({_name:"Custom context"}));
 console.log(hero.getSecretIdentity());
+*/
 
 console.log('====================================');
 
-var length = 10;
+
 function fn() {
-	console.log(this.length);
+    console.log(this.length);
 }
 
 var obj = {
-  length: 5,
-  method: function(fn) {
-    fn();
-    arguments[0]();
-  }
+    length: 5,
+    method: function (fn) {
+        fn();
+        arguments[0]();
+    }
 };
 
-obj.method(fn, 1);
+obj.method(fn, 1, 8);
+
